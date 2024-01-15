@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 11:02:31 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/15 17:21:06 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/15 18:02:13 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 //////////////constructor & destructor///////////////
 
-Cat::Cat( void ) : Animal(), _brain(new Brain())
+Cat::Cat( void ) : AAnimal(), _brain(new Brain())
 {
 	std::cout << "Cat constructor Called" << std::endl;
 	this->_type = "Cat";
 	return;
 }
 
-Cat::Cat( Cat const & src ) : Animal ("Cat"), _brain(NULL)
+Cat::Cat( Cat const & src ) : AAnimal ("Cat"), _brain(NULL)
 {
 	std::cout << "Cat copy constructor called" << std::endl;
 	( * this ) = src;

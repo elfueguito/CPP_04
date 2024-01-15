@@ -6,19 +6,20 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 11:03:08 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/11 12:28:39 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/15 17:21:15 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog( void ) : Animal("Dog")
+Dog::Dog( void ) : Animal(), _brain(new Brain())
 {
 	std::cout << "Dog constructor Called" << std::endl;
+	this->_type = "Dog";
 	return;
 }
 
-Dog::Dog( Dog const & src ) : Animal ("Dog")
+Dog::Dog( Dog const & src ) : Animal ("Dog"), _brain(NULL)
 {
 	std::cout << "Dog copy constructor called" << std::endl;
 	( * this ) = src;
@@ -28,15 +29,19 @@ Dog::Dog( Dog const & src ) : Animal ("Dog")
 Dog::~Dog( void )
 {
 	std::cout << "destructor cat called" << std::endl;
+	delete(this->_brain);
 	return;
 }
 
 Dog& Dog::operator=(Dog const & rhv)
 {
 	std::cout << "Dog assignment operator called" << std::endl;
-	if (this!= &rhv)
+	if (this != &rhv)
 	{
-		Dog::operator=(rhv);
+		this->_type = rhv._type;
+		if (this->_brain != NULL)
+			delete(this->_brain);
+		this->_brain = new Brain(*rhv._brain);
 	}
 	return( * this );
 }
@@ -44,4 +49,9 @@ void	Dog::makeSound() const
 {
 	std::cout << "whaaff whaaf" << std::endl;
 	return;
+}
+
+Brain* Dog::getBrain() const
+{
+	return (this->_brain);
 }

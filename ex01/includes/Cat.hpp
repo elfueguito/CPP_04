@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 10:56:19 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/11 15:53:36 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/15 16:03:29 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ private:
 
 public:
 		Cat();
-		~Cat();
 		Cat(Cat const & src);
+		virtual ~Cat();
 
 		Cat & operator=( Cat const & rhs );
 
-		Brain* getBrain() const;
 		void makeSound() const;
+		Brain* getBrain() const;
 };
 
 #endif

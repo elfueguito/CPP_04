@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 10:57:16 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/15 16:02:59 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/15 18:00:22 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 private:
 		Brain* _brain;

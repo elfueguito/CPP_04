@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 11:25:03 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/15 16:43:50 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/15 18:05:09 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	mandatoryTest()
 {
 	int size = 4;
 
-	Animal* animals[size + 1];
+	AAnimal* animals[size + 1];
 	animals[size] = NULL;
 
 	for(int i = 0; i < size/2; i++)
@@ -47,7 +47,7 @@ void	testAnimalArray(void)
 	std::cout <<  "-------------------------------" << std::endl
 		<< "\tANIMAL ARRAY TEST" << std::endl
 		<<  "-------------------------------" << std::endl << std::endl;
-	Animal	* animalArray[4 + 1];
+	AAnimal	* animalArray[4 + 1];
 	animalArray[4] = NULL;
 
 	std::cout << "-- Creating a kennel of " << 4 << " animals: " 

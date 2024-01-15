@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 10:57:16 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/15 16:02:59 by cbacquet         ###   ########.fr       */
+/*   Created: 2024/01/11 10:44:11 by cbacquet          #+#    #+#             */
+/*   Updated: 2024/01/15 18:04:41 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef ANIMAL_HPP
 
-#ifndef DOG_HPP
-
-# define DOG_HPP
+# define ANIMAL_HPP
 
 #include <iostream>
 #include <string>
-#include "Animal.hpp"
-#include "Brain.hpp"
 
-class Dog : public Animal
+
+class AAnimal
 {
-private:
-		Brain* _brain;
+protected:
+		std::string _type;
+
 public:
-		Dog();
-		Dog(Dog const & src);
-		virtual ~Dog();
-		
-		Dog & operator=( Dog const & rhs );	
-		
-		Brain* getBrain() const;
-		void makeSound() const;
+		AAnimal();
+		AAnimal(std::string const type);
+		AAnimal(AAnimal const & src);
+		virtual ~AAnimal();
+
+		std::string getType() const;
+		virtual void makeSound() const = 0;
+
+		AAnimal & operator=( AAnimal const & rhs );
 };
 
 #endif

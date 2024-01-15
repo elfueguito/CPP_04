@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/11 10:57:16 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/15 16:02:59 by cbacquet         ###   ########.fr       */
+/*   Created: 2024/01/11 10:57:57 by cbacquet          #+#    #+#             */
+/*   Updated: 2024/01/11 12:46:13 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#ifndef DOG_HPP
+#ifndef WRONGANIMAL_HPP
 
-# define DOG_HPP
+# define WRONGANIMAL_HPP
 
 #include <iostream>
 #include <string>
-#include "Animal.hpp"
-#include "Brain.hpp"
 
-class Dog : public Animal
+class WrongAnimal
 {
-private:
-		Brain* _brain;
+protected:
+		std::string _type;
+		
 public:
-		Dog();
-		Dog(Dog const & src);
-		virtual ~Dog();
-		
-		Dog & operator=( Dog const & rhs );	
-		
-		Brain* getBrain() const;
+		WrongAnimal();
+		WrongAnimal(std::string const type);
+		WrongAnimal(WrongAnimal const & src);
+		~WrongAnimal();
+
+		std::string getType() const;
 		void makeSound() const;
+
+		WrongAnimal & operator=( WrongAnimal const & rhs );
 };
 
 #endif
