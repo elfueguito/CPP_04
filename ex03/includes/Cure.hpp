@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMatiera.hpp                                       :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/15 18:15:07 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/16 14:22:25 by cbacquet         ###   ########.fr       */
+/*   Created: 2024/01/16 14:21:46 by cbacquet          #+#    #+#             */
+/*   Updated: 2024/01/16 14:31:05 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMATERIA_HPP
+#ifndef CURE_HPP
 
-# define AMATERIA_HPP
+# define CURE_HPP
 
-#include <iostream>
+#include "AMatiera.hpp"
+#include "ICharacter.hpp"
 
-class AMateria
+class Cure: public AMateria
 {
-protected:
-		//[a completer ]
-
 public:
-		AMateria(std::string const & type);
-		//[a completer]
-
-		std::string const & getType() const;
+		Cure();
+		Cure(Cure const & src);
+		~Cure();
 		
-		virtual AMateria* clone() const = 0;
-		virtual void use(ICharacter& target);
+		Cure& operator=(Cure const & rhv);
+		
+		AMateria* clone() const;
+		void use( ICharacter& target );	
 };
 
 #endif
