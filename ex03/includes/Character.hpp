@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:21:49 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/16 14:53:06 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/17 18:18:32 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,20 @@
 
 #include <iostream>
 #include <string>
-#include "AMatiera.hpp"
+#include "MateriaSource.hpp"
 #include "ICharacter.hpp"
 
 class Character: public ICharacter
 {
 private:
-		std::string name;
-		AMateria* inventory[4];
-		void initializeEmptyInventory( void );
-		void deleteInventory( void );
+		std::string _name;
+		AMateria* _inventory[4];
+		void _initializeEmptyInventory( void );
+		void _deleteInventory( void );
 		static const int _numberMaxOfItems = 4;
 public:
-		Character(const std::string& name);
+		Character();
+		Character(std::string name);
 		~Character();
 		
 		std::string const & getName() const;

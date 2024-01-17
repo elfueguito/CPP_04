@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:21:54 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/16 14:28:12 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/17 18:20:38 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ public:
 		Ice& operator=(Ice const & rhv);
 		AMateria* clone() const;
 		void use( ICharacter& target );
-
 };
 
 #endif

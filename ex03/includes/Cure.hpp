@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:21:46 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/16 14:31:05 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/17 16:16:09 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 # define CURE_HPP
 
-#include "AMatiera.hpp"
+#include "AMateria.hpp"
 #include "ICharacter.hpp"
 
 class Cure: public AMateria
