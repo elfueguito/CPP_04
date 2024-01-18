@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:21:49 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/17 18:18:32 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/18 17:16:04 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ public:
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);
 
-		Character & operator=(Character const & src);
+		Character & operator=(Character const & rhv);
 };
 
 #endif
