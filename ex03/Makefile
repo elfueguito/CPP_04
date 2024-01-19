@@ -1,6 +1,6 @@
 NAME = Materia
 S = srcs/
-HEADERS = ./includes/AMateria.hpp ./includes/Character.hpp ./includes/ICharacter.hpp ./includes/MateriaSource.hpp ./includes/IMateriaSource.hpp./includes/Ice.hpp ./includes/Cure.hpp
+HEADERS = ./includes/AMateria.hpp ./includes/Character.hpp ./includes/ICharacter.hpp ./includes/MateriaSource.hpp ./includes/IMateriaSource.hpp ./includes/Ice.hpp ./includes/Cure.hpp
 
 CC = c++
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -g3

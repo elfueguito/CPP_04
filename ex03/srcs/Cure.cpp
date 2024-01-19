@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 16:28:02 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/18 17:08:04 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/19 16:04:47 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Cure::Cure() : AMateria ("cure")
 Cure::Cure(Cure const & src) : AMateria("cure")
 {
 	std::cout << "Cure copy Constructor called" << std::endl;
+	*this = src;
 	return;
 }
 
@@ -30,7 +31,7 @@ Cure::~Cure()
 	return;
 }
 
-Cure & Cure::operator=(Cure Const & rhv)
+Cure & Cure::operator=(Cure const & rhv)
 {
 	if (this != &rhv)
 		this->_type = rhv._type;

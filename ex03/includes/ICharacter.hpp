@@ -6,13 +6,15 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:08:27 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/16 14:11:16 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/19 15:58:04 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 
 # define ICHARACTER_HPP
+
+class AMateria;
 
 class ICharacter
 {

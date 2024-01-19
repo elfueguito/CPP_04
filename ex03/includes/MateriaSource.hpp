@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/16 14:31:16 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/17 18:24:30 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/19 13:45:36 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ private:
 		static const int	_nbOfMaterias = 4;
 		AMateria*			_materias[4];
 
-		void				_initializeEmptyInventory();
-		void				_deleteInventory();
+		void				_initEmptyMaterias();
+		void				_deleteMaterias();
 };
 
 #endif 

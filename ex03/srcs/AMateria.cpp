@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 15:35:54 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/18 16:27:18 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/19 16:02:17 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ AMateria::AMateria(std::string const & type) : _type(type)
 	return;
 }
 
-AMateria::AMateria(AMateria const & src)
+AMateria::AMateria(AMateria const & src) : _type(src._type)
 {
 	std::cout << "AMateria copy constructor called" << std::endl;
 	return;
