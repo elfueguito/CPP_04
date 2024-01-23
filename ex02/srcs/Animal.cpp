@@ -6,7 +6,7 @@
 /*   By: cbacquet <cbacquet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 10:44:18 by cbacquet          #+#    #+#             */
-/*   Updated: 2024/01/15 18:06:21 by cbacquet         ###   ########.fr       */
+/*   Updated: 2024/01/18 15:49:32 by cbacquet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@ AAnimal::AAnimal(AAnimal const &src)
 
 AAnimal::~AAnimal( void )
 {
-	std::cout << "Destructor Animal called for a " << this->_type << std::endl;
+	std::cout << "Destructor AAnimal called for a " << this->_type << std::endl;
 	return;
 }
 
-// void	Animal::makeSound( void ) const
-// {
-// 	std::cout << this->_type << " ( default Animal sound )" << std::endl;
-// 	return;
-// }
+void	AAnimal::makeSound( void ) const
+{
+	std::cout << this->_type << " ( default Animal sound )" << std::endl;
+	return;
+}
 
 AAnimal& AAnimal::operator=(AAnimal const &rhv)
 {
